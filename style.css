@@ -1,43 +1,48 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9; /* Very light grey background */
     color: #333;
     line-height: 1.6;
 }
 
 header {
-    background-color: #282828;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #f0f4f8; /* Light blue-grey background */
+    color: #333; /* Dark text for contrast */
+    padding: 15px 0;
     text-align: center;
+    border-bottom: 2px solid #ddd; /* Light grey border */
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
+    font-weight: bold;
 }
 
 header h2 {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: normal;
+    color: #555; /* Slightly darker text color for h2 */
 }
 
 section {
-    padding: 20px;
+    padding: 25px;
     margin: 20px;
-    background-color: #fff;
+    background-color: #ffffff; /* White background for sections */
     border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 h2 {
-    border-bottom: 2px solid #ccc;
+    border-bottom: 3px solid #e0e0e0; /* Light grey border for headings */
     padding-bottom: 10px;
     margin-bottom: 20px;
     font-size: 1.8em;
+    color: #444; /* Darker grey text color */
 }
 
 .profile-section {
@@ -47,18 +52,28 @@ h2 {
 }
 
 .profile-photo {
-    width: 200px; /* Increase the size */
+    width: 200px; /* Size of the photo */
     height: 200px;
     border-radius: 50%;
-    margin-left: 20px; /* Add margin to the left side */
+    border: 5px solid #e0e0e0; /* Light grey border around photo */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    margin-left: 20px; /* Margin to the left side */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.profile-photo:hover {
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
 .profile-info {
     flex: 1;
+    padding: 0 20px; /* Padding around the text */
 }
 
 .profile-info p {
-    margin: 5px 0;
+    margin: 10px 0; /* Space between lines */
+    font-size: 1.1em; /* Slightly larger font */
+    color: #666; /* Darker grey text */
 }
 
 .info-section p {
@@ -79,20 +94,25 @@ h2 {
     width: 200px;
     height: auto;
     border-radius: 8px;
+    border: 2px solid #e0e0e0; /* Light grey border for photos */
     margin: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #282828;
-    color: #fff;
+    padding: 15px;
+    background-color: #f0f4f8; /* Light blue-grey footer */
+    color: #333; /* Dark text for contrast */
     position: fixed;
     bottom: 0;
     width: 100%;
 }
-
-/* Existing CSS styles */
 
 /* Media query for mobile view */
 @media (max-width: 768px) {
@@ -104,7 +124,7 @@ footer {
 
     .profile-photo {
         order: -1; /* Move the photo to the top */
-        width: 150px; /* Adjust size if needed */
+        width: 150px; /* Adjust size */
         height: 150px;
         margin-bottom: 20px; /* Space below the photo */
     }
@@ -112,5 +132,6 @@ footer {
     .profile-info {
         order: 1; /* Ensure profile info stays below the photo */
         margin: 0; /* Reset margin */
+        padding: 0 10px; /* Padding for better readability */
     }
 }
