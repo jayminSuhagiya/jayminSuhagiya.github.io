@@ -2,59 +2,115 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #f8f8f8;
-    padding: 20px;
+    background-color: #282828;
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
 }
 
-h1 {
+header h1 {
     margin: 0;
+    font-size: 2.5em;
 }
 
-#my-details {
+header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+section {
     padding: 20px;
-    background-color: #f0f0f0;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
 }
 
 .profile-section {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
 .profile-photo {
-    width: 150px;
-    height: 150px;
+    width: 200px; /* Increase the size */
+    height: 200px;
     border-radius: 50%;
-    margin-right: 20px;
+    margin-left: 20px; /* Add margin to the left side */
+}
+
+.profile-info {
+    flex: 1;
 }
 
 .profile-info p {
     margin: 5px 0;
 }
 
-#family-details {
-    padding: 20px;
-    background-color: #e0e0e0;
+.info-section p {
+    margin: 10px 0;
 }
 
 #photos {
-    padding: 20px;
-    background-color: #d0d0d0;
+    margin-top: 20px;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .photo-gallery img {
     width: 200px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px;
 }
 
 footer {
-    background-color: #f8f8f8;
-    padding: 10px;
     text-align: center;
+    padding: 10px;
+    background-color: #282828;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Existing CSS styles */
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .profile-section {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align items */
+    }
+
+    .profile-photo {
+        order: -1; /* Move the photo to the top */
+        width: 150px; /* Adjust size if needed */
+        height: 150px;
+        margin-bottom: 20px; /* Space below the photo */
+    }
+
+    .profile-info {
+        order: 1; /* Ensure profile info stays below the photo */
+        margin: 0; /* Reset margin */
+    }
 }
