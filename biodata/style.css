@@ -60,18 +60,21 @@ h2 {
 }
 
 .profile-photo {
+    margin-right: 100px;
     flex-shrink: 0; /* Prevent the photo from shrinking */
-    width: 200px; /* Size of the photo */
-    height: 200px;
-    border-radius: 50%;
-    border: 5px solid #e0e0e0; /* Light grey border around photo */
+    width: 200px; /* Width of the photo */
+    height: 250px; /* Height of the photo to make it a rectangle */
+    border-radius: 10px; /* Slightly rounded corners for a softer look */
+    border: 5px solid #e0e0e0; /* Light grey border around the photo */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     margin-left: 20px; /* Margin to the left side */
-    transition: transform 0.3s ease; /* Smooth transition */
+    object-fit: cover; /* Ensure the image is cropped to fit within the rectangle */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
 }
 
 .profile-photo:hover {
-    transform: scale(1.05); /* Slight zoom effect */
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover for more depth */
 }
 
 .info-section p {
@@ -87,22 +90,24 @@ h2 {
     flex-wrap: wrap; /* Wrap photos if necessary */
     gap: 20px; /* Space between photos */
     justify-content: space-evenly; /* Center the photos */
+    object-fit: cover; /* Ensure the image is cropped to fit within the rectangle */
 }
 
 /* General styles for photos */
 .photo-gallery img {
-    width: 300px; /* Increase size of photos */
+    width: 340px; /* Increase size of photos */
     height: auto;
     border-radius: 8px;
     border: 2px solid #e0e0e0; /* Light grey border for photos */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     transition: transform 0.3s ease; /* Smooth transition */
+    object-fit: cover; /* Ensure the image is cropped to fit within the rectangle */
 }
 
 /* Media query for mobile view */
 @media (max-width: 768px) {
     .photo-gallery img {
-        width: 240px; /* Adjust size for mobile view */
+        width: 300px; /* Adjust size for mobile view */
     }
 }
 
@@ -132,6 +137,7 @@ footer {
         width: 150px; /* Adjust size */
         height: 150px;
         margin-bottom: 20px; /* Space below the photo */
+        margin-right: 0px !important;
     }
 
     .profile-info {
