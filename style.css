@@ -2,56 +2,59 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
+    box-sizing: border-box;
 }
 
 header {
-    background-color: #2a9d8f;
-    color: #fff;
+    background-color: #f8f8f8;
+    padding: 20px;
     text-align: center;
-    padding: 2rem 0;
-}
-
-h1, h2 {
-    margin: 0;
 }
 
 h1 {
-    font-size: 2.5rem;
+    margin: 0;
 }
 
-h2 {
-    font-size: 1.8rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
+#my-details {
+    padding: 20px;
+    background-color: #f0f0f0;
 }
 
-section {
-    margin: 2rem auto;
-    padding: 1.5rem;
-    max-width: 600px;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-section#photos .photo-gallery {
+.profile-section {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
-section#photos .photo-gallery img {
-    width: 30%;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+#family-details {
+    padding: 20px;
+    background-color: #e0e0e0;
+}
+
+#photos {
+    padding: 20px;
+    background-color: #d0d0d0;
+}
+
+.photo-gallery img {
+    width: 200px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 footer {
-    background-color: #264653;
-    color: #fff;
+    background-color: #f8f8f8;
+    padding: 10px;
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
 }
