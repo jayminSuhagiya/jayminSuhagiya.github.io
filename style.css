@@ -22,21 +22,16 @@ header h1 {
     font-weight: bold;
 }
 
-header h2 {
-    margin: 0;
-    font-size: 1.4em;
-    font-weight: normal;
-    color: #555; /* Slightly darker text color for h2 */
-}
-
 section {
     padding: 25px;
-    margin: 20px;
+    margin: 20px auto;
     background-color: #ffffff; /* White background for sections */
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 1200px; /* Maximum width for larger screens */
 }
 
+/* Headings */
 h2 {
     border-bottom: 3px solid #e0e0e0; /* Light grey border for headings */
     padding-bottom: 10px;
@@ -45,24 +40,12 @@ h2 {
     color: #444; /* Darker grey text color */
 }
 
+/* Profile Section */
 .profile-section {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap; /* Wrap items if necessary */
     align-items: center;
-}
-
-.profile-photo {
-    width: 200px; /* Size of the photo */
-    height: 200px;
-    border-radius: 50%;
-    border: 5px solid #e0e0e0; /* Light grey border around photo */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    margin-left: 20px; /* Margin to the left side */
-    transition: transform 0.3s ease; /* Smooth transition */
-}
-
-.profile-photo:hover {
-    transform: scale(1.05); /* Slight zoom effect */
+    justify-content: space-between;
 }
 
 .profile-info {
@@ -76,6 +59,21 @@ h2 {
     color: #666; /* Darker grey text */
 }
 
+.profile-photo {
+    flex-shrink: 0; /* Prevent the photo from shrinking */
+    width: 200px; /* Size of the photo */
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #e0e0e0; /* Light grey border around photo */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    margin-left: 20px; /* Margin to the left side */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.profile-photo:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
 .info-section p {
     margin: 10px 0;
 }
@@ -86,8 +84,9 @@ h2 {
 
 .photo-gallery {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Wrap photos if necessary */
+    gap: 20px; /* Space between photos */
+    justify-content: center; /* Center the photos */
 }
 
 .photo-gallery img {
@@ -95,7 +94,6 @@ h2 {
     height: auto;
     border-radius: 8px;
     border: 2px solid #e0e0e0; /* Light grey border for photos */
-    margin: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     transition: transform 0.3s ease; /* Smooth transition */
 }
@@ -117,7 +115,6 @@ footer {
 /* Media query for mobile view */
 @media (max-width: 768px) {
     .profile-section {
-        display: flex;
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center-align items */
     }
