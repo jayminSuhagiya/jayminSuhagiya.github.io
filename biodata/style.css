@@ -1,0 +1,148 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Very light grey background */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #f0f4f8; /* Light blue-grey background */
+    color: #333; /* Dark text for contrast */
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 2px solid #ddd; /* Light grey border */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+section {
+    padding: 25px;
+    margin: 20px auto;
+    background-color: #ffffff; /* White background for sections */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 1200px; /* Maximum width for larger screens */
+}
+
+/* Headings */
+h2 {
+    border-bottom: 3px solid #e0e0e0; /* Light grey border for headings */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #444; /* Darker grey text color */
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items if necessary */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-info {
+    flex: 1;
+    padding: 0 20px; /* Padding around the text */
+}
+
+.profile-info p {
+    margin: 10px 0; /* Space between lines */
+    font-size: 1.1em; /* Slightly larger font */
+    color: #666; /* Darker grey text */
+}
+
+.profile-photo {
+    margin-right: 100px;
+    flex-shrink: 0; /* Prevent the photo from shrinking */
+    width: 200px; /* Width of the photo */
+    height: 250px; /* Height of the photo to make it a rectangle */
+    border-radius: 10px; /* Slightly rounded corners for a softer look */
+    border: 5px solid #e0e0e0; /* Light grey border around the photo */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    margin-left: 20px; /* Margin to the left side */
+    object-fit: cover; /* Ensure the image is cropped to fit within the rectangle */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+
+.profile-photo:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover for more depth */
+}
+
+.info-section p {
+    margin: 10px 0;
+}
+
+#photos {
+    margin-top: 20px;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Wrap photos if necessary */
+    gap: 20px; /* Space between photos */
+    justify-content: space-evenly; /* Center the photos */
+    object-fit: cover; /* Ensure the image is cropped to fit within the rectangle */
+}
+
+/* General styles for photos */
+.photo-gallery img {
+    width: 340px; /* Increase size of photos */
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0; /* Light grey border for photos */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Smooth transition */
+    object-fit: cover; /* Ensure the image is cropped to fit within the rectangle */
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .photo-gallery img {
+        width: 300px; /* Adjust size for mobile view */
+    }
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f0f4f8; /* Light blue-grey footer */
+    color: #333; /* Dark text for contrast */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align items */
+    }
+
+    .profile-photo {
+        order: -1; /* Move the photo to the top */
+        width: 150px; /* Adjust size */
+        height: 150px;
+        margin-bottom: 20px; /* Space below the photo */
+        margin-right: 0px !important;
+    }
+
+    .profile-info {
+        order: 1; /* Ensure profile info stays below the photo */
+        margin: 0; /* Reset margin */
+        padding: 0 10px; /* Padding for better readability */
+    }
+}
